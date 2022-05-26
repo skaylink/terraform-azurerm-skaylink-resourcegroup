@@ -1,5 +1,5 @@
 # A Terraform module to create a subset of cloud components
-# Copyright (C) 2022 IQ3 CLOUD Skaylink GmbH
+# Copyright (C) 2022 Skaylink GmbH
 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,7 +15,6 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # For questions and contributions please contact info@iq3cloud.com
-# https://github.com/iq3cloud-dev/terraform-azurerm-iq3-vnet
 
 resource "azurerm_resource_group" "resourcegroup" {
   name     = var.name
