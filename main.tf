@@ -17,13 +17,9 @@
 # For questions and contributions please contact info@iq3cloud.com
 
 resource "azurerm_resource_group" "resourcegroup" {
-  name     = var.name
+  for_each = toset(var.name)
+  
+  name     = each.value
   location = var.location
-  tags = {
-    customTag1 = var.customTag1
-    customTag2 = var.customTag2
-    customTag3 = var.customTag3
-    customTag4 = var.customTag4
-    customTag5 = var.customTag5
-  }
+  tags = var.tags
 }

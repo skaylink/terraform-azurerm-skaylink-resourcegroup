@@ -17,7 +17,7 @@
 # For questions and contributions please contact info@iq3cloud.com
 
 variable "name" {
-  type        = string
+  type        = list(string)
   description = "The name of the resource group you are deploying"
 }
 
@@ -27,27 +27,7 @@ variable "location" {
   default     = "westeurope"
 }
 
-variable "customTag1" {
-  type        = string
-  description = "the first customTag"
-}
-
-variable "customTag2" {
-  type        = string
-  description = "the second customTag"
-}
-
-variable "customTag3" {
-  type        = string
-  description = "the third customTag"
-}
-
-variable "customTag4" {
-  type        = string
-  description = "the fourth customTag"
-}
-
-variable "customTag5" {
-  type        = string
-  description = "the fifth customTag"
+variable "tags" {
+  type = map(string)
+  description = "A map of tags to be applied to the resource group(s)"
 }
