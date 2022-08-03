@@ -17,7 +17,7 @@
 # For questions and contributions please contact info@iq3cloud.com
 
 variable "name" {
-  type        = list(string)
+  type        = string
   description = "The name of the resource group you are deploying"
 }
 

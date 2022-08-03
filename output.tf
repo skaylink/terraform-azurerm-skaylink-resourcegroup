@@ -15,3 +15,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # For questions and contributions please contact info@iq3cloud.com
+
+output "resource_group" {
+  value = azurerm_resource_group.resource_group
+}
