@@ -31,3 +31,15 @@ variable "tags" {
   type        = map(string)
   description = "A map of tags to be applied to the resource group(s)"
 }
+
+variable "lock" {
+  type        = bool
+  description = "Add a lock in the resource group, defaults to false"
+  default     = false
+}
+
+variable "lock_level" {
+  type        = string
+  description = "Lock type enabled in the resource group, defaults to ReadOnly"
+  default     = "ReadOnly"
+}
