@@ -22,3 +22,10 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
   tags     = var.tags
 }
+
+resource "azurerm_management_lock" "lock" {
+  count      = var.lock == true ? 1 : 0
+  name       = var.lock_level
+  scope      = azurerm_resource_group.resource_group.id
+  lock_level = var.lock_level
+}
